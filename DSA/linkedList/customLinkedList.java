@@ -60,6 +60,61 @@ public class customLinkedList {
         System.out.println("END");
     }
 
+    public int deleteFirst(){
+        int val = head.value;
+        head = head.next;
+
+        if(head == null){
+            tail = null;
+        }
+        size--;
+        return val;
+    }
+
+    public int deleteLast(){
+        if (size <= 1) {
+            deleteFirst();
+        }
+        Node secondLast = get(size - 2);
+        int val = tail.value;
+        tail = secondLast;
+        tail.next = null;
+        return val;
+    }
+
+    public int delete(int index){
+        if(size == 0){
+            deleteFirst();
+        }
+        if(index == size-1){
+            deleteLast();
+        }
+
+        Node prev = get(index - 1);
+        int val = prev.next.value;
+        prev.next = prev.next.next;
+        return val;
+    }
+
+    public Node find(int value){
+        Node node = head;
+        while (node != null) {
+            if (node.value == value) {
+                return node;
+            }
+            node = node.next;
+        }
+        return null;
+    }
+
+    public Node get(int index){
+        Node node = head;
+        for(int i = 0; i < index; i++){
+            node = node.next;
+        }
+        return node;
+    }
+
     public customLinkedList(){
         this.size = 0;
     }

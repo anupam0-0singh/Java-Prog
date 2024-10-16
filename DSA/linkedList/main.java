@@ -17,5 +17,21 @@ public class main {
 
         list.insert(100, 4);
         list.display();
+
+        list.deleteFirst();
+        list.display();
+
+        System.out.println(list.deleteFirst());
+        list.display();
+
+        System.out.println(list.deleteLast());
+        list.display();
+
+        list.delete(5);
+        list.display();
+
+        System.out.println(list.delete(2));
+        list.display();
+
     }
 }
