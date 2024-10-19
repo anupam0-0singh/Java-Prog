@@ -16,14 +16,33 @@ public class customDLL {
         head = node;
     }
 
+    // public void insertLast(int value){
+
+    //     if(tail == null){
+    //         insertFirst(value);
+    //         return;
+    //     }
+    //     Node node = new Node(value);
+    //     node.next = null;
+    //     tail.next = node;
+    //     node.prev = tail;
+    //     tail = node;
+    // }
+
     public void display(){
         Node node = head;
+        Node last = null;
 
         while(node != null){
             System.out.print(node.value + " -> ");
+            last = node;
             node = node.next;
         }
         System.out.println("END");
+    }
+
+    public void displayReverse(){
+        
     }
 
     private class Node{
