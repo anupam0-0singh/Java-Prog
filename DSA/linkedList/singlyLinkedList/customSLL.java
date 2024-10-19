@@ -1,10 +1,9 @@
-package DSA.linkedList;
+package DSA.linkedList.singlyLinkedList;
 
-public class customLinkedList {
+public class customSLL {
 
     private Node head;
     private Node tail;
-
     private int size;
 
     public void insertFirst(int value){
@@ -115,7 +114,7 @@ public class customLinkedList {
         return node;
     }
 
-    public customLinkedList(){
+    public customSLL(){
         this.size = 0;
     }
 

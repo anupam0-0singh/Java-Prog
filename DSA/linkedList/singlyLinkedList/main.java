@@ -1,8 +1,8 @@
-package DSA.linkedList;
+package DSA.linkedList.singlyLinkedList;
 
 public class main {
     public static void main(String args[]){
-        customLinkedList list = new customLinkedList();
+        customSLL list = new customSLL();
         list.insertFirst(3);
         list.insertFirst(5);
         list.insertFirst(7);
@@ -32,7 +32,5 @@ public class main {
 
         System.out.println(list.delete(2));
         list.display();
-
-        // For commit purpose only
     }
 }
