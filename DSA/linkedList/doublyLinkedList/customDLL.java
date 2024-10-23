@@ -31,18 +31,12 @@ public class customDLL {
 
     public void display(){
         Node node = head;
-        Node last = null;
 
         while(node != null){
             System.out.print(node.value + " -> ");
-            last = node;
             node = node.next;
         }
         System.out.println("END");
-    }
-
-    public void displayReverse(){
-        
     }
 
     private class Node{
